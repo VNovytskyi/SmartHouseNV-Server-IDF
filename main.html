@@ -1,0 +1,25 @@
+<script>
+    var socket = new WebSocket("ws://192.168.1.108");
+    
+    socket.onopen = function(e) {
+        console.log("[ OK ] Open WebClient");
+    };
+
+    socket.onmessage = function(event) {
+        console.log(`[message] Данные получены с сервера: ${event.data}`);
+    };
+
+    socket.onclose = function(event) {
+        if (event.wasClean) {
+            console.log(`[close] Соединение закрыто чисто, код=${event.code} причина=${event.reason}`);
+        } else {
+            console.log('[close] Соединение прервано');
+        }
+    };
+
+    socket.onerror = function(error) {
+        console.log(`[error] ${error.message}`);
+    };
+    
+    //socket.send(JSON.stringify(obj));
+</script>

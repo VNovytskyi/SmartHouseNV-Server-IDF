@@ -1,32 +1,16 @@
 /*
-	Команды IDF
-	
-	idf.py menuconfig - вызов оконного интерфейса для настройки нашей прошивки
+	System
 */
-
-
 #include <stdio.h>
-
-
 #include "lwip/api.h"
-
-/*
-	Библиотека для вывода логов.
-	
-	Выбор уровня детализации логинга:
-		Перед сборкой:   menuconfig -> bootloader config -> bootloader log verbosity;
-		Во время работы: esp_log_level_set(EESP_LOG_NONE | ESP_LOG_ERROR | ESP_LOG_WARN | ESP_LOG_INFO | ESP_LOG_DEBUG | ESP_LOG_VERBOSE). ! Но не выше чем было
-		
-	ESP_LOGE - error 	(lowest level)
-	ESP_LOGW - warning
-	ESP_LOGI - info
-	ESP_LOGD - debug
-	ESP_LOGV - verbose  (highest level)
-	
-	
-*/
 #include "esp_log.h"
-
+#include "esp_event.h"
+#include "nvs_flash.h"
+#include <esp_system.h>
+#include <nvs_flash.h>
+#include <sys/param.h>
+#include "nvs_flash.h"
+#include <string.h>
 
 /*
 	FreeRTOS
@@ -34,24 +18,6 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
-
-
-#ifdef HTTPD_MAX_REQ_HDR_LEN
-#undefine HTTPD_MAX_REQ_HDR_LEN
-#define 2048
-#endif
-
-#include "esp_event.h"
-#include "nvs_flash.h"
-#include <esp_system.h>
-#include <nvs_flash.h>
-#include <sys/param.h>
-#include "nvs_flash.h"
-
-#include <string.h>
-
-/* WebSocket server */
-#include "websocket_server.h"
 
 /* Wi-Fi*/
 #include "esp_wifi.h"
@@ -63,6 +29,8 @@ static int reconnectCounter = 0;
 static int maxRecconectCounter = 3;
 static EventGroupHandle_t wifiEventGroup;
 
+/* WebSocket server */
+#include "websocket_server.h"
 static QueueHandle_t client_queue;
 const static int client_queue_size = 10;
 
@@ -378,27 +346,6 @@ static void server_handle_task(void* pvParameters) {
   vTaskDelete(NULL);
 }
 
-static void count_task(void* pvParameters) {
-  const static char* TAG = "count_task";
-  char out[20];
-  int len;
-  int clients;
-  const static char* word = "%i";
-  uint8_t n = 0;
-  const int DELAY = 1000 / portTICK_PERIOD_MS; // 1 second
-
-  ESP_LOGI(TAG,"starting task");
-  for(;;) {
-    len = sprintf(out,word,n);
-    clients = ws_server_send_text_all(out,len);
-    if(clients > 0) {
-      //ESP_LOGI(TAG,"sent: \"%s\" to %i clients",out,clients);
-    }
-    n++;
-    vTaskDelay(DELAY);
-  }
-}
-
 
 /* Точка входа */
 void app_main(void)
@@ -433,7 +380,6 @@ void app_main(void)
 	
 	xTaskCreate(&server_task,"server_task",3000,NULL,9,NULL);
     xTaskCreate(&server_handle_task,"server_handle_task",4000,NULL,6,NULL);
-    xTaskCreate(&count_task,"count_task",6000,NULL,2,NULL);
 	
 	ESP_LOGI("app_main", "Ready");
 }
