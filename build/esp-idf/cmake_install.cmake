@@ -99,6 +99,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/esp/projects/test01/build/esp-idf/unity/cmake_install.cmake")
   include("C:/esp/projects/test01/build/esp-idf/wifi_provisioning/cmake_install.cmake")
   include("C:/esp/projects/test01/build/esp-idf/main/cmake_install.cmake")
+  include("C:/esp/projects/test01/build/esp-idf/websocket/cmake_install.cmake")
 
 endif()
 

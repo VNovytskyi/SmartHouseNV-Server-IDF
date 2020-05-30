@@ -233,7 +233,7 @@ IDF_PATH:UNINITIALIZED=C:/esp/esp-idf
 IDF_TARGET:STRING=esp32
 
 //No help, variable specified on the command line.
-LEGACY_INCLUDE_COMMON_HEADERS:UNINITIALIZED=
+LEGACY_INCLUDE_COMMON_HEADERS:UNINITIALIZED=y
 
 //Path to a program.
 MCONF:FILEPATH=C:/esp/tools/.espressif/tools/mconf/v4.6.0.0-idf-20190628/mconf-idf.exe
@@ -248,28 +248,28 @@ PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 SDKCONFIG:UNINITIALIZED=C:/esp/projects/test01/sdkconfig
 
 //Dependencies for the target
-__idf_bootloader_support_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
+__idf_bootloader_support_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
-__idf_efuse_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
+__idf_efuse_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
-__idf_log_LIB_DEPENDS:STATIC=general;__idf_xtensa;
+__idf_log_LIB_DEPENDS:STATIC=general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
-__idf_main_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
+__idf_main_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
-__idf_micro-ecc_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
+__idf_micro-ecc_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
 __idf_soc_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_esp_rom;general;__idf_esp_common;general;__idf_xtensa;
 
 //Dependencies for the target
-__idf_spi_flash_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
+__idf_spi_flash_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;general;__idf_soc;
 
 //Dependencies for the target
-__idf_xtensa_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_esp_rom;general;__idf_esp_common;general;C:/esp/esp-idf/components/xtensa/esp32/libhal.a;
+__idf_xtensa_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_esp_rom;general;__idf_esp_common;general;__idf_soc;general;C:/esp/esp-idf/components/xtensa/esp32/libhal.a;
 
 //Value Computed by CMake
 bootloader_BINARY_DIR:STATIC=C:/esp/projects/test01/build/bootloader
