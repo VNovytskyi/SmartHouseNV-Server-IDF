@@ -1,0 +1,148 @@
+body{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 100%; 
+    height: 25px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 1.0; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer;
+}
+
+#myRange::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer; 
+}
+
+#myRange {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 13.8px 0;
+}
+
+#myRange:focus {
+    outline: none;
+}
+
+#myRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+#myRange::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d;
+    border: 0.2px solid #1b2d00;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.836);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+
+#myRange:focus::-webkit-slider-runnable-track {
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+}
+
+#myRange::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+#myRange::-moz-range-thumb {
+    box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d;
+    border: 0.2px solid #1b2d00;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+    cursor: pointer;
+}
+
+#myRange::-ms-track {
+    width: 80%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+#myRange::-ms-fill-lower {
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+#myRange::-ms-fill-upper {
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+#myRange::-ms-thumb {
+    box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d;
+    border: 0.2px solid #1b2d00;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: rgba(105, 89, 112, 0.87);
+    cursor: pointer;
+    height: 8.4px;
+}
+
+#myRange:focus::-ms-fill-lower {
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right,  red, orange , yellow, green, cyan, blue, violet);
+}
+
+#myRange:focus::-ms-fill-upper {
+    background: -moz-linear-gradient(right,  red, orange , yellow, green, cyan, blue, violet); 
+    background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+}
+

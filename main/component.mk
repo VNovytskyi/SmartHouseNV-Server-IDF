@@ -1,1 +1,1 @@
-COMPONENT_EMBED_FILES := ./server/error.html ./server/favicon.ico ./server/root.html ./server/test.css ./server/test.js
+COMPONENT_EMBED_FILES := ./server/error.html ./server/favicon.ico ./server/main.html ./server/style.css ./server/script.js ./server/webSocket.js
