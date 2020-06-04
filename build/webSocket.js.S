@@ -1,4 +1,4 @@
-/* * Data converted from C:/esp/projects/test01/main/server/webSocket.js
+/* * Data converted from C:/esp/projects/SmartHousNV-Server-IDF/main/server/webSocket.js
  */
 .data
 .section .rodata.embedded

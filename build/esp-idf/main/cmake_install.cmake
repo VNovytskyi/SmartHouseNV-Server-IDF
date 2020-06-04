@@ -1,4 +1,4 @@
-# Install script for directory: C:/esp/projects/test01/main
+# Install script for directory: C:/esp/projects/SmartHousNV-Server-IDF/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

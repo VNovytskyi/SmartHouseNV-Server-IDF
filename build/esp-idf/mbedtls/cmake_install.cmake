@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/esp/projects/test01/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/esp/projects/SmartHousNV-Server-IDF/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 
 endif()
 

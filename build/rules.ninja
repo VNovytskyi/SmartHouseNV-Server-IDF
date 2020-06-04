@@ -1276,7 +1276,7 @@ rule CXX_STATIC_LIBRARY_LINKER____idf_websocket
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\esp\tools\.espressif\tools\cmake\3.13.4\bin\cmake.exe -SC:\esp\projects\test01 -BC:\esp\projects\test01\build
+  command = C:\esp\tools\.espressif\tools\cmake\3.13.4\bin\cmake.exe -SC:\esp\projects\SmartHousNV-Server-IDF -BC:\esp\projects\SmartHousNV-Server-IDF\build
   description = Re-running CMake...
   generator = 1
 

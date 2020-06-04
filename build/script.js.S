@@ -1,4 +1,4 @@
-/* * Data converted from C:/esp/projects/test01/main/server/script.js
+/* * Data converted from C:/esp/projects/SmartHousNV-Server-IDF/main/server/script.js
  */
 .data
 .section .rodata.embedded

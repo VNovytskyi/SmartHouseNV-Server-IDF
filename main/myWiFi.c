@@ -1,5 +1,4 @@
 /* Wi-Fi*/
-#include "esp_wifi.h"
 #define WIFI_SSID "MERCUSYS_7EBA"
 #define WIFI_PASS "3105vlad3010vlada"
 #define WIFI_CONNECTED_BIT BIT0

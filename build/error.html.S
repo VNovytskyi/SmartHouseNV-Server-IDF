@@ -1,4 +1,4 @@
-/* * Data converted from C:/esp/projects/test01/main/server/error.html
+/* * Data converted from C:/esp/projects/SmartHousNV-Server-IDF/main/server/error.html
  */
 .data
 .section .rodata.embedded

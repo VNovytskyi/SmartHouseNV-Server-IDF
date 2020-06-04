@@ -6,10 +6,10 @@
 #include "esp_event.h"
 #include "nvs_flash.h"
 #include <esp_system.h>
-#include <nvs_flash.h>
 #include <sys/param.h>
-#include "nvs_flash.h"
 #include <string.h>
+#include "esp_wifi.h"
+
 
 /*
 	FreeRTOS
@@ -38,7 +38,7 @@ void app_main(void)
 	ESP_ERROR_CHECK(esp_event_loop_create_default());
 	
 	connectToAP();
-	
+    
 	int wsStatus = ws_server_start();
 	
 	if(wsStatus == 1)
@@ -58,4 +58,6 @@ void app_main(void)
     xTaskCreate(&server_handle_task, "server_handle_task", 4000, NULL, 6, NULL);
 	
 	ESP_LOGI("app_main", "Ready");
+    
+    
 }

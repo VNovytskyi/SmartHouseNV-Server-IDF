@@ -1,4 +1,4 @@
-/* * Data converted from C:/esp/projects/test01/main/server/style.css
+/* * Data converted from C:/esp/projects/SmartHousNV-Server-IDF/main/server/style.css
  */
 .data
 .section .rodata.embedded

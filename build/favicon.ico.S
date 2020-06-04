@@ -1,4 +1,4 @@
-/* * Data converted from C:/esp/projects/test01/main/server/favicon.ico
+/* * Data converted from C:/esp/projects/SmartHousNV-Server-IDF/main/server/favicon.ico
  */
 .data
 .section .rodata.embedded
