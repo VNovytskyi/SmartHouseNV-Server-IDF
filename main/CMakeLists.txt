@@ -1,3 +1,3 @@
 idf_component_register(SRCS "main.c"
     INCLUDE_DIRS "."
-    EMBED_FILES server/error.html server/favicon.ico server/style.css server/script.js server/main.html server/webSocket.js)
+    EMBED_FILES serverFiles/error.html serverFiles/favicon.ico serverFiles/style.css serverFiles/script.js serverFiles/main.html serverFiles/webSocket.js)
